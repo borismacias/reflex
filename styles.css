@@ -382,7 +382,7 @@ nav .navbar-brand img {
   top: 100%;
   z-index: 10;
   display: block;
-  height: 50px;
+  height: 170px;
   background-size: 50px 100%;
   background-image: linear-gradient(135deg, hsla(var(--accent-hsl),1) 25%, transparent 25%), linear-gradient(225deg, hsla(var(--accent-hsl),1) 25%, transparent 25%);
   background-position: 0 0;
@@ -418,8 +418,8 @@ nav .navbar-brand img {
 .contact-info {
   display: flex;
   font-family: "Bitter", serif;
-  margin-top: 4rem;
-  margin-bottom: 1rem;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
   justify-content: center;
   gap: 4rem;
   @media screen and (max-width: 769px) {
@@ -586,3 +586,94 @@ nav .navbar-brand img {
   border-bottom: 1px solid!important;
 }
 
+.our-work {
+  background-color: hsla(var(--lightAccent-hsl), 1);
+
+  .main-content {
+    padding: 4rem 2rem;
+    @media screen and (max-width: 769px) {
+      padding: 4rem 2rem;
+    }
+  }
+
+  .section-title {
+    font-size: 3rem;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 3rem;
+
+    @media screen and (max-width: 769px) {
+      font-size: 2rem!important;
+    }
+  }
+
+  .project-card {
+    padding: 2rem;
+    background-color: white;
+    margin: 0 0.5rem;
+    text-align: center;
+
+    .image-wrapper {
+      img {
+        width: 100%;
+        max-width: inherit;
+        height: auto;
+      }
+    }
+
+    p {
+      font-size: 1.25rem;
+      margin-top: 1rem;
+      font-weight: 700;
+      font-family: 'Shrikhand', serif;
+    }
+
+    a.btn {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background-color: hsla(var(--accent-hsl), 1);
+      border: none;
+      border-radius: 300px;
+      text-decoration: none;
+
+      @media screen and (max-width: 769px) {
+        margin-top: 0;
+        width: 100%;
+      }
+    }
+    a.btn:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.our-work-digital-design-page {
+  background-color: hsla(var(--lightAccent-hsl), 1);
+
+  .project {
+    cursor: pointer;
+
+    .image-wrapper {
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    img {
+      height: 500px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    p {
+      font-size: 2rem;
+      font-weight: 700;
+      font-family: 'Shrikhand', serif;
+    }
+  }
+
+  .project:hover {
+    opacity: 0.8;
+  }
+}
