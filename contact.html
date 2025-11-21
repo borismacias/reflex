@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Agencia Reflex</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="sidebar-content">
+        <a href="#">Nuestros trabajos</a>
+        <a href="/we-are.html">Acerca de</a>
+        <a href="/contact.html">Contacto</a>
+      </div>
+    </div>
+
+    <div class="main">
+      <nav class="navbar navbar-expand-lg px-5">
+        <div class="container-fluid px-0">
+          <a class="navbar-brand" href="/">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/6914f0fe117d47276173c99f/63290eb5-2a43-4037-be87-6580e2bb76ee/logo+version+2.0.png?format=120w"
+              alt="Agencia Reflex"
+              class="d-inline-block align-text-top"
+            />
+          </a>
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            onclick="toggleSidebar()"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 bitter-regular">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Nuestros trabajos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/we-are.html">Acerca de</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/contact.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="row flex-column flex-lg-row contact-us-form-page">
+        <div class="col">
+          <div class="contact-us-page d-flex flex-column align-items-start py-3 px-5">
+            <div class="mb-4">
+              <strong class="text-black bitter-regular lead">
+                ¿Listo para dar vida a tu próximo proyecto?
+              </strong>
+              <h2
+                class="section-title shrikhand-regular text-black"
+              >
+                Contáctanos
+              </h2>
+              <h3 class="shrikhand-regular text-black cta">Para cotizar lo que necesitas</h3>
+
+              <p class="text-black bitter-regular pt-4">
+                Solo necesitamos algunos datos antes de empezar.
+              </p>
+              <p class="text-black bitter-regular">
+                Completa este formulario o, si prefieres, escríbenos directamente por teléfono o correo electrónico.
+              </p>
+              <strong><a class="text-black text-decoration-none" href="tel:+56989744851">+(56) 9 8974 4851</a> / <a class="text-black text-decoration-none" href="mailto:sofiamonyu@gmail.com">sofiamonyu@gmail.com</a></strong>
+            </div>
+
+            <div>
+              <form>
+                <div class="row mb-3">
+                  <div class="col me-2">
+                    <label for="form-name" class="form-label text-black"
+                      >Nombre <span class="text-black muted">*</span></label
+                    >
+                    <input type="text" class="form-control" id="form-name" />
+                  </div>
+                  <div class="col">
+                    <label for="form-lastname" class="form-label text-black"
+                      >Apellido <span class="text-black muted">*</span></label
+                    >
+                    <input type="text" class="form-control" id="form-lastname" />
+                  </div>
+                </div>
+
+                <div class="row" style="margin-bottom: 3rem;">
+                  <div class="col">
+                    <label for="form-email" class="form-label text-black"
+                      >Email <span class="text-black muted">*</span></label
+                    >
+                    <input type="email" class="form-control" id="form-email" />
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <div class="col">
+                    <label class="form-label text-black"
+                      >¿Qué tipo de servicio necesitas?
+                      <span class="text-black muted">*</span></label
+                    >
+                    <span
+                      class="form-label d-block text-black muted"
+                      style="font-size: small;"
+                      >Selecciona todos los que quieras</span
+                    >
+                    <div class="services-wrapper-contact-page">
+                      <div class="row mb-2">
+                        <div class="col">
+                          <label for="digital-checkbox">
+                            <input
+                              id="digital-checkbox"
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                            />
+                            Diseño digital (Banners, redes sociales, piezas para web,
+                            infografías, etc.)
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="row mb-2">
+                        <div class="col">
+                          <label for="printed-checkbox">
+                            <input
+                              id="printed-checkbox"
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                            />
+                            Diseño impreso (afiches, libros, catálogos, papelería,
+                            manuales, etc.)
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="row mb-2">
+                        <div class="col">
+                          <label for="live-checkbox">
+                            <input
+                              id="live-checkbox"
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                            />
+                            Video live action (con grabación real o videos de banco)
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="row mb-2">
+                        <div class="col">
+                          <label for="animation-checkbox">
+                            <input
+                              id="animation-checkbox"
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                            />
+                            Video animado
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="row mb-2">
+                        <div class="col">
+                          <label for="music-checkbox">
+                            <input
+                              id="music-checkbox"
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                            />
+                            Producción musical o sonido (frases de radio, jingles,
+                            canciones, etc.)
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="row mb-2">
+                        <div class="fit-content-width me-2">
+                          <label for="photo-checkbox">
+                            <input
+                              id="photo-checkbox"
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                            />
+                            Fotografía profesional
+                          </label>
+                        </div>
+                        <div class="fit-content-width">
+                          <label for="branding-checkbox">
+                            <input
+                              id="branding-checkbox"
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                            />
+                            Branding (identidad visual)
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="row mb-2">
+                        <div class="fit-content-width me-2">
+                          <label for="signals-checkbox">
+                            <input
+                              id="signals-checkbox"
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                            />
+                            Señalética
+                          </label>
+                        </div>
+                        <div class="fit-content-width me-2">
+                          <label for="packaging-checkbox">
+                            <input
+                              id="packaging-checkbox"
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                            />
+                            Packaging
+                          </label>
+                        </div>
+                        <div class="fit-content-width">
+                          <label for="other-checkbox">
+                            <input
+                              id="other-checkbox"
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                            />
+                            Otros
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row mt-4 mb-3">
+                  <div class="col">
+                    <label for="form-message" class="form-label text-black"
+                      >Descripción de la solicitud</label
+                    >
+                    <span class="d-block muted text-black" style="font-size: small;"
+                      >Cantidad de entregables, Formatos, Adaptaciones, Reducciones
+                      (si es que corresponde) y la mayor cantidad de formatos
+                      posibles.</span
+                    >
+                    <textarea
+                      class="form-control mt-4 p-4"
+                      id="form-message"
+                      rows="4"
+                    ></textarea>
+                  </div>
+                </div>
+
+                <div class="row mt-4 mb-3">
+                  <div class="col">
+                    <label class="form-label text-black"
+                      >Fecha límite <span class="text-black muted">*</span></label
+                    >
+                    <span class="d-block muted text-black" style="font-size: small;"
+                      >Día en que deben estar todos los formatos entregados y
+                      listos.</span
+                    >
+                    <input
+                      type="date"
+                      name="deadline"
+                      id=""
+                      class="px-3 py-2 mt-2"
+                      style="border-style: solid; border-width: 1px; color: black"
+                    />
+                  </div>
+                </div>
+
+                <a href="#" class="btn submit-btn" role="button">Enviar formulario</a>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col image-column p-0">
+          <img
+            class="w-100"
+            src="https://imagedelivery.net/M5OoQrcJJvgPjOJsBnwejA/2799157e-f0ac-4881-fd82-ef67e00c3d00/public"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div class="contact-info">
+        <div class="logo-wrapper">
+          <img
+            src="https://imagedelivery.net/M5OoQrcJJvgPjOJsBnwejA/b93908c5-c869-4ac1-fcee-9809de693400/public"
+            alt=""
+          />
+        </div>
+        <div class="info-wrapper bitter-regular">
+          <p style="font-size: small;">DIRECCIÓN DE CORREO</p>
+          <p style="font-size: x-large;">sofiamonyu@gmail.com</p>
+          <p style="font-size: small;">NÚMERO DE CONTACTO</p>
+          <p style="font-size: x-large;">(+56) 9 8974 4851</p>
+        </div>
+      </div>
+
+      <section class="negative-spikes"></section>
+    </div>
+
+    <script>
+      function toggleSidebar() {
+        const sidebar = document.getElementById("mySidebar");
+        if (sidebar.style.opacity === "1") {
+          closeNav();
+        } else {
+          openNav();
+        }
+      }
+
+      function openNav() {
+        document.getElementById("mySidebar").style.opacity = 1;
+        document.getElementById("mySidebar").style.height = "100%";
+        document.getElementById("mySidebar").style.zIndex = 3;
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidebar").style.opacity = 0;
+        document.getElementById("mySidebar").style.height = "0";
+        document.getElementById("mySidebar").style.zIndex = 1;
+        document.body.style.overflow = "auto";
+      }
+    </script>
+  </body>
+</html>

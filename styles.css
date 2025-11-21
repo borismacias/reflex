@@ -1,0 +1,588 @@
+:root {
+  --white-hsl: 0,0%,100%;
+  --black-hsl: 0,0%,0%;
+  --safeLightAccent-hsl: 240.54,68.94%,68.43%;
+  --safeDarkAccent-hsl: 240.54,68.94%,68.43%;
+  --safeInverseAccent-hsl: 0,0%,100%;
+  --safeInverseLightAccent-hsl: 0,0%,100%;
+  --safeInverseDarkAccent-hsl: 0,0%,100%;
+  --accent-hsl: 240.54,68.94%,68.43%;
+  --lightAccent-hsl: 60,4.35%,95.49%;
+  --darkAccent-hsl: 0,0%,30.98%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.accordion-button:hover {
+  box-shadow: none;
+}
+
+.main {
+  flex: 1;
+  min-height: 100%;
+  .row {
+    --bs-gutter-x: 0;
+  }
+}
+
+.shrikhand-regular {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.roboto-italic {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+  font-variation-settings:
+    "wdth" 100;
+}
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: italic;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.bitter-regular {
+  font-family: "Bitter", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.bitter-bold {
+  font-family: "Bitter", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.bitter-italic {
+  font-family: "Bitter", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+}
+.bitter-bold-italic {
+  font-family: "Bitter", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: italic;
+}
+
+nav {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding-top: 2vw!important;
+  padding-bottom: 2vw!important;
+  padding-left: 4vw!important;
+  padding-right: 4vw!important;
+  background-color: hsla(var(--lightAccent-hsl), 1);
+}
+
+nav .nav-item {
+  margin-left: 2vw;
+}
+
+li.nav-item.active {
+  border-bottom: 0.2rem solid hsla(var(--accent-hsl), 1);
+}
+
+nav .nav-link {
+  padding: 0!important;
+}
+
+nav .navbar-brand {
+  padding: 0!important;
+}
+
+nav .navbar-brand img {
+  width: auto;
+  max-width: 100%;
+  max-height: 28px;
+}
+
+#videoDiv {
+  width: 100%;
+  height: calc(100vh - 74px);
+  position: relative;
+}
+
+#videoDiv video {
+  object-fit: cover;
+  width: 100%;
+  height: calc(100vh - 74px);
+}
+
+#video1 {
+  margin: auto;
+  display: block;
+  height: calc(100vh - 74px);
+}
+
+#videoMessage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#hero-message {
+  position: absolute;
+  top: 30%;
+  color: white;
+  width: 100%;
+  margin: auto;
+  @media screen and (max-width: 769px) {
+    top: 20%;
+  }
+}
+
+#hero-message .wrapper{
+  @media screen and (max-width: 769px) {
+    width: 100%!important;
+    padding: 0 20px;
+  }
+}
+
+#hero-message h1 {
+  font-size: 70px!important;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  text-align:center;
+  white-space:pre-wrap;
+  @media screen and (max-width: 769px) {
+    font-size: 36px!important;
+    margin-bottom: 1rem;
+  }
+}
+
+.our-work-btn {
+  margin-top: 30px;
+  padding: 15px 30px;
+  font-size: 18px;
+  color: white;
+  background-color: hsla(var(--accent-hsl), 1);
+  border: none;
+  border-radius: 300px;
+  text-decoration: none;
+  font-weight: 100;
+  @media screen and (max-width: 769px) {
+    margin-top: 0;
+    width: 100%;
+  }
+}
+
+.who-we-are {
+  padding: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: hsla(var(--lightAccent-hsl), 1);
+
+  @media screen and (max-width: 769px) {
+    padding: 2rem;
+    padding-top: 4rem;
+  }
+}
+
+.title-wrapper {
+  margin-bottom: 20px;
+}
+
+.title-wrapper h1{
+  font-size: 54px;
+  margin: 0;
+  padding: 0;
+
+  @media screen and (max-width: 769px) {
+    font-size: 38px;
+    line-height: 2rem;
+  }
+}
+
+.who-we-are-text {
+  @media screen and (min-width: 769px) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+.who-we-are .our-work-btn {
+  @media screen and (max-width: 769px) {
+    width: 100%!important;
+    margin-bottom: 3rem!important;
+  }
+}
+
+.contact-us-page {
+  background-color: hsla(var(--lightAccent-hsl), 1);
+}
+
+.contact-us {
+  background-color: hsla(var(--accent-hsl),1);
+
+  @media screen and (min-width: 769px) {
+    padding: 3rem;
+    padding-top: 100px!important;
+  }
+}
+
+.contact-us h2 {
+  text-align: center;
+  @media screen and (max-width: 769px) {
+    font-size: 3rem!important;
+  }
+}
+
+.contact-us-form {
+  font-family: "Bitter", serif;
+  font-weight: 300;
+}
+
+.contact-us-form input, .contact-us-form textarea {
+   background-color: transparent;
+   border-color: black;
+   border-radius: 24px;
+   color: white;
+   font-family: "Bitter", serif;
+}
+
+.contact-us-form input:focus, .contact-us-form textarea:focus {
+   background-color: #ffffff80;
+}
+
+.contact-us-form-page input, .contact-us-form-page textarea {
+  background-color: transparent;
+  border-color: black;
+  border-radius: 24px;
+  color: black;
+  font-family: "Bitter", serif;
+}
+
+.contact-us-form-page {
+  .section-title {
+    font-size: 97px!important;
+    margin: 0;
+
+    @media screen and (max-width: 769px) {
+      font-size: 3rem!important;
+    }
+  }
+
+  .lead {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  .cta {
+    font-size: 2.25rem;
+    line-height: 0rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.muted {
+  opacity: 0.7;
+}
+
+.services-wrapper {
+  color: white;
+  font-size: 0.9rem;
+}
+
+.services-wrapper-contact-page {
+  color: black;
+  font-size: 0.9rem;
+}
+
+.services-wrapper input {
+  margin-right: 0.5rem;
+  width: 20px;
+  height: 20px;
+  margin-top: 0;
+}
+
+.services-wrapper label {
+  line-height: 20px;
+}
+
+.services-wrapper .row {
+  @media screen and (max-width: 769px) {
+    margin-bottom: 1rem!important;
+  }
+}
+
+.fit-content-width {
+  width: fit-content;
+}
+
+.submit-btn {
+  margin-top: 30px;
+  padding: 15px 30px;
+  font-size: 18px;
+  color: hsla(var(--accent-hsl), 1);
+  background-color: white;
+  border: none;
+  border-radius: 300px;
+  text-decoration: none;
+}
+
+.submit-btn:hover {
+  background-color: rgb(238, 234, 234);
+  color: hsla(var(--accent-hsl), 1);
+}
+
+.spikes, .negative-spikes {
+  position: relative;
+}
+
+.spikes::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  left: -0%;
+  top: 100%;
+  z-index: 10;
+  display: block;
+  height: 50px;
+  background-size: 50px 100%;
+  background-image: linear-gradient(135deg, hsla(var(--accent-hsl),1) 25%, transparent 25%), linear-gradient(225deg, hsla(var(--accent-hsl),1) 25%, transparent 25%);
+  background-position: 0 0;
+}
+
+.negative-spikes::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  left: -0%;
+  top: 100%;
+  z-index: 10;
+  display: block;
+  height: 50px;
+  background-size: 50px 100%;
+  background-image: linear-gradient(135deg, hsla(var(--white-hsl),1) 25%, transparent 25%), linear-gradient(225deg, hsla(var(--white-hsl),1) 25%, transparent 25%);
+  background-position: 0 0;
+  background-color: hsla(var(--accent-hsl), 1);
+}
+
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-wrapper img {
+  width: auto;
+  max-width: 100%;
+  max-height: 80px;
+}
+
+.contact-info {
+  display: flex;
+  font-family: "Bitter", serif;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+  gap: 4rem;
+  @media screen and (max-width: 769px) {
+    flex-direction: column;
+  }
+}
+
+.contact-info .info-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+/* The sidebar menu */
+.sidebar {
+  height: 0;
+  width: 100%;
+  opacity: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: hsla(var(--lightAccent-hsl), 1);
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 0;
+  transition: 0.3s;
+}
+
+.sidebar .navbar-brand {
+  padding-top: 10px;
+}
+
+.sidebar .navbar-brand img {
+  width: auto;
+  max-width: 100%;
+  max-height: 28px;
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 6.6vmin;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: hsla(var(--safeDarkAccent-hsl), 1);
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  height: 100%;
+  font-family: "Bitter", serif;
+}
+
+.we-are-intro {
+  padding: 4rem;
+  padding-top: 5rem;
+
+  @media screen and (max-width: 991px) {
+    padding: 2rem;
+    padding-top: 3rem;
+  }
+}
+
+.we-are-title {
+  font-size: 70px;
+  max-width: 50%;
+  line-height: 74px;
+
+  @media screen and (max-width: 991px) {
+    max-width: 100%;
+    font-size: 48px;
+    line-height: 52px;
+  }
+}
+
+.we-are-subtitle {
+  font-size: 48px;
+  margin-top: 4rem;
+  border-bottom: 1px solid black;
+  padding-bottom: 1.5rem;
+
+  @media screen and (max-width: 991px) {
+    font-size: 32px;
+    margin-top: 2rem;
+  }
+}
+
+.accordion-header button{
+  font-size: 1.75rem;
+  font-family: "Shrikhand", serif;
+  padding-left: 0;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  @media screen and (max-width: 991px) {
+    font-size: 1.5rem;
+  }
+}
+
+.accordion {
+  --bs-accordion-border-color: hsla(var(--darkAccent-hsl), 1);
+  --bs-accordion-active-bg: transparent;
+  --bs-accordion-active-color: black;
+}
+
+.accordion-body {
+  font-size: 24px;
+  font-family: "Bitter", serif;
+  padding-left: 0;
+  padding-bottom: 2.5rem;
+}
+
+.image-column img{
+  height: 100%;
+
+  @media screen and (max-width: 991px) {
+    height: 350px;
+    object-fit: cover;
+    object-position: bottom;
+  }
+}
+
+.accordion-item:last-child {
+  border-bottom: 1px solid!important;
+}
+
