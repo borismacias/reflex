@@ -15,6 +15,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
 </head>
+<script src="https://www.google.com/recaptcha/enterprise.js?render=6Le5mBosAAAAAHGhb0VA48zJIbLgWPSc-XjgZtoK"></script>
 <body>
   <div id="mySidebar" class="sidebar">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -151,21 +152,26 @@
         </div>
       </div>
       <div style="flex: 1" class="px-4">
-        <form class="contact-us-form">
+        <script>
+          function onSubmit(token) {
+            document.getElementById("contact-form").submit();
+          }
+        </script>
+        <form class="contact-us-form" id="contact-form" method="POST" action="http://localhost:3000/form-submit">
           <div class="row mb-3">
             <div class="col me-2">
               <label for="form-name" class="form-label text-white">Nombre <span class="text-white muted">*</span></label>
-              <input type="text" class="form-control" id="form-name">
+              <input type="text" class="form-control" id="form-name" name="first_name">
             </div>
             <div class="col">
               <label for="form-lastname" class="form-label text-white">Apellido <span class="text-white muted">*</span></label>
-              <input type="text" class="form-control" id="form-lastname">
+              <input type="text" class="form-control" id="form-lastname" name="last_name">
             </div>
           </div>
           <div class="row" style="margin-bottom: 3rem;">
             <div class="col">
               <label for="form-email" class="form-label text-white">Email <span class="text-white muted">*</span></label>
-              <input type="email" class="form-control" id="form-email">
+              <input type="email" class="form-control" id="form-email" name="email">
             </div>
           </div>
           <div class="row mb-3">
@@ -176,7 +182,7 @@
                 <div class="row mb-2">
                   <div class="col">
                     <label for="digital-checkbox">
-                      <input id="digital-checkbox" class="form-check-input" type="checkbox" value="">
+                      <input id="digital-checkbox" class="form-check-input" type="checkbox" value="Diseño Digital" name="extra[servicio][]">
                       Diseño digital (Banners, redes sociales, piezas para web, infografías, etc.)
                     </label>
                   </div>
@@ -184,7 +190,7 @@
                 <div class="row mb-2">
                   <div class="col">
                     <label for="printed-checkbox">
-                      <input id="printed-checkbox" class="form-check-input" type="checkbox" value="">
+                      <input id="printed-checkbox" class="form-check-input" type="checkbox" value="Diseño Impreso" name="extra[servicio][]">
                       Diseño impreso (afiches, libros, catálogos, papelería, manuales, etc.)
                     </label>
                   </div>
@@ -192,7 +198,7 @@
                 <div class="row mb-2">
                   <div class="col">
                     <label for="live-checkbox">
-                      <input id="live-checkbox" class="form-check-input" type="checkbox" value="">
+                      <input id="live-checkbox" class="form-check-input" type="checkbox" value="Video Live Action" name="extra[servicio][]">
                       Video live action (con grabación real o videos de banco)
                     </label>
                   </div>
@@ -200,7 +206,7 @@
                 <div class="row mb-2">
                   <div class="col">
                     <label for="animation-checkbox">
-                      <input id="animation-checkbox" class="form-check-input" type="checkbox" value="">
+                      <input id="animation-checkbox" class="form-check-input" type="checkbox" value="Video Animado" name="extra[servicio][]">
                       Video animado
                     </label>
                   </div>
@@ -208,21 +214,21 @@
                 <div class="row mb-2">
                   <div class="col">
                     <label for="music-checkbox">
-                      <input id="music-checkbox" class="form-check-input" type="checkbox" value="">
+                      <input id="music-checkbox" class="form-check-input" type="checkbox" value="Producción musical o sonido" name="extra[servicio][]">
                       Producción musical o sonido (frases de radio, jingles, canciones, etc.)
                     </label>
                   </div>
                 </div>
                 <div class="row mb-2">
-                  <div class="fit-content-width mb-2">
+                  <div class="fit-content-width me-2">
                     <label for="photo-checkbox">
-                      <input id="photo-checkbox" class="form-check-input" type="checkbox" value="">
+                      <input id="photo-checkbox" class="form-check-input" type="checkbox" value="Fotografía profesional" name="extra[servicio][]">
                       Fotografía profesional
                     </label>
                   </div>
                   <div class="fit-content-width me-2">
                     <label for="branding-checkbox">
-                      <input id="branding-checkbox" class="form-check-input" type="checkbox" value="">
+                      <input id="branding-checkbox" class="form-check-input" type="checkbox"  value="Branding (identidad visual)" name="extra[servicio][]">
                       Branding (identidad visual)
                     </label>
                   </div>
@@ -230,19 +236,19 @@
                 <div class="row mb-2">
                   <div class="fit-content-width me-2">
                     <label for="signals-checkbox">
-                      <input id="signals-checkbox" class="form-check-input" type="checkbox" value="">
+                      <input id="signals-checkbox" class="form-check-input" type="checkbox" value="Señalética" name="extra[servicio][]">
                       Señalética
                     </label>
                   </div>
                   <div class="fit-content-width me-2">
                     <label for="packaging-checkbox">
-                      <input id="packaging-checkbox" class="form-check-input" type="checkbox" value="">
+                      <input id="packaging-checkbox" class="form-check-input" type="checkbox" value="Packaging" name="extra[servicio][]">
                       Packaging
                     </label>
                   </div>
                   <div class="fit-content-width me-2">
                     <label for="other-checkbox">
-                      <input id="other-checkbox" class="form-check-input" type="checkbox" value="">
+                      <input id="other-checkbox" class="form-check-input" type="checkbox" value="Otros" name="extra[servicio][]">
                       Otros
                     </label>
                   </div>
@@ -254,17 +260,17 @@
             <div class="col">
               <label for="form-message" class="form-label text-white">Descripción de la solicitud</label>
               <span class="d-block muted text-white" style="font-size: small;">Cantidad de entregables, Formatos, Adaptaciones, Reducciones (si es que corresponde) y la mayor cantidad de detalles posibles.</span>
-              <textarea class="form-control mt-4 p-4" id="form-message" rows="4"></textarea>
+              <textarea class="form-control mt-4 p-4" id="form-message" rows="4" name="content"></textarea>
             </div>
           </div>
           <div class="row mt-4 mb-3">
             <div class="col">
               <label for="form-message" class="form-label text-white">Fecha límite <span class="text-white muted">*</span></label>
               <span class="d-block muted text-white" style="font-size: small;">Día en que deben estar todos los formatos entregados y listos.</span>
-              <input type="date" name="deadline" id="" class="px-3 py-2 mt-2" style="border-style: solid; border-width: 1px; color: black">
+              <input type="date" min="2025-11-20" name="extra[deadline]" id="" class="px-3 py-2 mt-2" style="border: 1px solid white; color: white">
             </div>
           </div>
-          <a href="#" class="btn submit-btn bitter-bold w-100" role="button">Enviar formulario</a>
+          <button type="submit" class="btn g-recaptcha submit-btn bitter-bold w-100"  data-sitekey="6Le5mBosAAAAAHGhb0VA48zJIbLgWPSc-XjgZtoK" data-callback='onSubmit' data-action='submit'>Enviar formulario</button>
         </form>
       </div>
     </div>
