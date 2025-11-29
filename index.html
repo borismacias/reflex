@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="/app.js"></script>
   <meta property="og:title" content="Agencia Audiovisual Reflex" />
   <meta property="og:url" content="https://reflex.cl" />
   <meta property="og:image" content="https://imagedelivery.net/M5OoQrcJJvgPjOJsBnwejA/5725258b-0a6c-4524-3003-e96bff486000/public" />
@@ -106,7 +107,7 @@
             document.getElementById("contact-form").submit();
           }
         </script>
-        <form class="contact-us-form" id="contact-form" method="POST" action="https://apiforms.codingchickens.comform-submit">
+        <form class="contact-us-form" id="contact-form" method="POST" action="https://apiforms.codingchickens.com/form-submit">
           <div class="row mb-3">
             <div class="col me-2">
               <label for="form-name" class="form-label text-white">Nombre <span class="text-white muted">*</span></label>
@@ -216,7 +217,7 @@
             <div class="col">
               <label for="form-message" class="form-label text-white">Fecha límite <span class="text-white muted">*</span></label>
               <span class="d-block muted text-white" style="font-size: small;">Día en que deben estar todos los formatos entregados y listos.</span>
-              <input type="date" min="2025-11-20" name="extra[deadline]" id="" class="px-3 py-2 mt-2" style="border: 1px solid white; color: white">
+              <input type="date" name="extra[deadline]" id="" class="px-3 py-2 mt-2" style="border: 1px solid white; color: white">
             </div>
           </div>
           <button type="submit" class="btn g-recaptcha submit-btn bitter-bold w-100"  data-sitekey="6Le5mBosAAAAAHGhb0VA48zJIbLgWPSc-XjgZtoK" data-callback='onSubmit' data-action='submit'>Enviar formulario</button>
@@ -238,29 +239,19 @@
     <section class="negative-spikes white-inset"></section>
   </div>
 
-  <script>
-    function toggleSidebar() {
-      const sidebar = document.getElementById("mySidebar");
-      if (sidebar.style.opacity === 1) {
-        closeNav();
-      } else {
-        openNav();
-      }
-    }
-
-    function openNav() {
-      document.getElementById("mySidebar").style.opacity = 1;
-      document.getElementById("mySidebar").style.height = "100%";
-      document.getElementById("mySidebar").style.zIndex = 3;
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeNav() {
-      document.getElementById("mySidebar").style.opacity = 0;
-      document.getElementById("mySidebar").style.height = "0";
-      document.getElementById("mySidebar").style.zIndex = 1;
-      document.body.style.overflow = 'auto';
-    }
-  </script>
+  <div class="modal" tabindex="-1" id="message-sent">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Mensaje enviado!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Tu mensaje ha sido enviado con éxito.</p>
+          <p>Nos pondremos en contacto contigo pronto.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
