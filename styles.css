@@ -202,11 +202,18 @@ nav .navbar-brand img {
   border: none;
   border-radius: 300px;
   text-decoration: none;
-  font-weight: 100;
+
   @media screen and (max-width: 769px) {
-    margin-top: 0;
+    margin-top: 40px;
     width: 100%;
   }
+}
+
+.our-work-btn:hover {
+  opacity: 0.8!important;
+  color: white;
+  background-color: hsla(var(--accent-hsl), 1);
+  border-color: hsla(var(--accent-hsl), 1);
 }
 
 .who-we-are {
@@ -299,7 +306,7 @@ nav .navbar-brand img {
 
 .contact-us-form-page {
   .section-title {
-    font-size: 97px!important;
+    font-size: 90px!important;
     margin: 0;
 
     @media screen and (max-width: 769px) {
@@ -313,9 +320,13 @@ nav .navbar-brand img {
   }
 
   .cta {
-    font-size: 2.25rem;
+    font-size: 2rem;
     line-height: 0rem;
     margin-bottom: 2rem;
+    @media screen and (max-width: 769px) {
+      line-height: 2rem;
+      margin-bottom: 1rem;
+    }
   }
 }
 
@@ -380,7 +391,7 @@ nav .navbar-brand img {
   right: 0;
   left: -0%;
   top: 100%;
-  z-index: 10;
+  z-index: 2;
   display: block;
   height: 170px;
   background-size: 50px 100%;
@@ -398,9 +409,13 @@ nav .navbar-brand img {
   display: block;
   height: 50px;
   background-size: 50px 100%;
-  background-image: linear-gradient(135deg, hsla(var(--white-hsl),1) 25%, transparent 25%), linear-gradient(225deg, hsla(var(--white-hsl),1) 25%, transparent 25%);
+  background-image: linear-gradient(135deg, hsla(var(--lightAccent-hsl),1) 25%, transparent 25%), linear-gradient(225deg, hsla(var(--lightAccent-hsl),1) 25%, transparent 25%);
   background-position: 0 0;
   background-color: hsla(var(--accent-hsl), 1);
+}
+
+.negative-spikes.white-inset::after {
+  background-image: linear-gradient(135deg, hsla(var(--white-hsl),1) 25%, transparent 25%), linear-gradient(225deg, hsla(var(--white-hsl),1) 25%, transparent 25%);
 }
 
 .logo-wrapper {
@@ -418,8 +433,8 @@ nav .navbar-brand img {
 .contact-info {
   display: flex;
   font-family: "Bitter", serif;
-  margin-top: 6rem;
-  margin-bottom: 3rem;
+  margin-top: 9rem;
+  margin-bottom: 5rem;
   justify-content: center;
   gap: 4rem;
   @media screen and (max-width: 769px) {
@@ -448,6 +463,13 @@ nav .navbar-brand img {
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 0;
   transition: 0.3s;
+}
+
+nav.navbar {
+  @media screen and (max-width: 991px) {
+    padding-top: 1.5rem!important;
+    padding-bottom: 1.5rem!important;
+  }
 }
 
 .sidebar .navbar-brand {
@@ -506,7 +528,7 @@ nav .navbar-brand img {
 .sidebar-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  padding-top: 50%;
   align-items: center;
   justify-items: center;
   height: 100%;
@@ -613,6 +635,10 @@ nav .navbar-brand img {
     margin: 0 0.5rem;
     text-align: center;
 
+    @media screen and (max-width: 769px) {
+      margin-bottom: 2rem;
+    }
+
     .image-wrapper {
       img {
         width: 100%;
@@ -675,5 +701,130 @@ nav .navbar-brand img {
 
   .project:hover {
     opacity: 0.8;
+  }
+}
+
+.our-work-title {
+  font-size: 3rem;
+  margin-top: 4rem;
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+
+  @media screen and (max-width: 769px) {
+    font-size: 2rem!important;
+  }
+
+  a {
+    padding-left: 2rem;
+    float: inline-start;
+    position: absolute;
+    left: 0;
+  }
+  a:hover {
+    color: hsla(var(--accent-hsl), 1)!important;
+  }
+}
+
+.our-work-link {
+  text-decoration: none;
+}
+
+.our-work-link:hover {
+  text-decoration: underline;
+  color: hsla(var(--accent-hsl), 1)!important;
+}
+
+.our-work-project-page {
+  .info-col {
+    margin-left: 2rem;
+  }
+
+  h4.title {
+    width: fit-content;
+    cursor: pointer;
+    font-family: 'Shrikhand', serif;
+    text-decoration: none;
+    background-image: linear-gradient(#222b40, #222b40),
+      linear-gradient(#222b40, #222b40),
+      linear-gradient(hsla(var(--accent-hsl), 1), hsla(var(--accent-hsl), 1));
+    background-size: 20px 2px, 100% 2px, 0 2px;
+    background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s linear, background-position 0.5s linear;
+
+    @media screen and (max-width: 769px) {
+      font-size: 2rem!important;
+    }
+  }
+
+  h4.title:hover {
+    background-size: 20px 2px, 0 2px, 100% 2px;
+    background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
+  }
+
+  .main-content .row {
+    padding: 8rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    @media screen and (max-width: 769px) {
+      padding: 2rem;
+    }
+  }
+
+  .gallery-content {
+    background: hsla(var(--lightAccent-hsl), 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .gallery-image {
+      padding-top: 50px;
+      max-width: 768px;
+      width: 100%;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .gallery-audio {
+      width: 100%;
+      max-width: 768px;
+
+      audio {
+        width: 100%;
+      }
+
+    }
+  }
+
+  .gallery-content.video-container {
+    padding-top: 6rem;
+    iframe {
+      width: 100%;
+      max-width: 1024px;
+      height: 576px;
+
+      @media screen and (max-width: 769px) {
+        height: 315px;
+      }
+    }
+  }
+
+  .info-col {
+    padding-left: 2rem;
+    @media screen and (max-width: 769px) {
+      padding: 0;
+      margin: 0;
+    }
+
+    p {
+      font-family: 'Bitter', serif;
+    }
   }
 }

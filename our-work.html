@@ -10,14 +10,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
   <div id="mySidebar" class="sidebar">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <div class="sidebar-content">
-      <a href="#">Nuestros trabajos</a>
-      <a href="/we-are.html">Acerca de</a>
-      <a href="#">Contacto</a>
+      <a href="/">Home</a>
+<a href="/our-work.html">Nuestros trabajos</a>
+      <a href="/about.html">Acerca de</a>
+      <a href="/contact.html">Contacto</a>
     </div>
   </div>
 
@@ -32,14 +37,17 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 bitter-regular">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#">Nuestros trabajos</a>
+              <a class="nav-link" href="/our-work.html">Nuestros trabajos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/we-are.html">Acerca de</a>
+              <a class="nav-link" href="/about.html">Acerca de</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contacto</a>
+              <a class="nav-link" href="/contact.html">Contacto</a>
             </li>
           </ul>
         </div>
@@ -57,35 +65,28 @@
             <img src="https://imagedelivery.net/M5OoQrcJJvgPjOJsBnwejA/490a1e07-b4bb-441f-4489-9f91b3564200/public" alt="">
           </div>
           <p class="text-center">Diseño Digital e Impreso</p>
-          <a class="btn" href="/projects/print-digital-design.html">Conocer trabajos</a>
+          <a class="btn bitter-bold" href="/projects/print-digital-design.html">Conocer trabajos</a>
         </div>
-        <!-- <div class="col project-card">
-          <div class="image-wrapper">
-            <img src="https://imagedelivery.net/M5OoQrcJJvgPjOJsBnwejA/61ee206a-0ee8-4754-435a-e987475ef900/public" alt="">
-          </div>
-          <p class="text-center">Diseño Impreso</p>
-          <a class="btn" href="/projects/print-design.html">Conocer trabajos</a>
-        </div> -->
         <div class="col project-card">
           <div class="image-wrapper">
             <img src="https://imagedelivery.net/M5OoQrcJJvgPjOJsBnwejA/a17cf1c2-e979-4e24-2843-3fc2e0088b00/public" alt="">
           </div>
           <p class="text-center">Audiovisual</p>
-          <a class="btn" href="/projects/audiovisual.html">Conocer trabajos</a>
+          <a class="btn bitter-bold" href="/projects/audiovisual.html">Conocer trabajos</a>
         </div>
         <div class="col project-card">
           <div class="image-wrapper">
             <img src="https://imagedelivery.net/M5OoQrcJJvgPjOJsBnwejA/2d486141-8fc2-40b2-c9ce-a5767e7a6000/public" alt="">
           </div>
           <p class="text-center">Fotografía</p>
-          <a class="btn" href="/projects/photography.html">Conocer trabajos</a>
+          <a class="btn bitter-bold disabled" href="/projects/photography.html">Proximamente</a>
         </div>
         <div class="col project-card">
           <div class="image-wrapper">
             <img src="https://imagedelivery.net/M5OoQrcJJvgPjOJsBnwejA/5f004c08-acd5-47c0-813a-8d42d0619900/public" alt="">
           </div>
           <p class="text-center">Música</p>
-          <a class="btn" href="/projects/music.html">Conocer trabajos</a>
+          <a class="btn bitter-bold" href="/projects/music.html">Conocer trabajos</a>
         </div>
       </div>
     </div>
@@ -93,14 +94,22 @@
     <div class="contact-us d-flex flex-column flex-lg-row align-items-start py-5">
       <div style="flex: 1;" class="px-3">
         <div style="max-width: 400px;">
-          <h2 class="section-title shrikhand-regular text-white text-decoration-underline" style="font-size: 60px;">Contáctanos</h2>
-          <p class="text-white bitter-regular">¿Quieres que trabajemos juntos? Ingresa tus datos y nos pondremos en contacto contigo en breve. Esperamos tener noticias tuyas pronto.</p>
+          <h2 class="section-title shrikhand-regular text-white" style="font-size: 60px;">Contáctanos</h2>
+          <h3 class="shrikhand-regular text-white cta">Para cotizar lo que necesitas</h3>
+
+          <p class="text-white bitter-regular pt-4">
+            Solo necesitamos algunos datos antes de empezar.
+          </p>
+          <p class="text-white bitter-regular">
+            Completa este formulario o, si prefieres, escríbenos directamente por teléfono o correo electrónico.
+          </p>
+          <strong><a class="text-white text-decoration-none" href="tel:+56946830936">+(56) 9 4683 0936 / </a><a class="text-white text-decoration-none" href="mailto:contacto@reflex.cl">contacto@reflex.cl</a></strong>
         </div>
       </div>
       <div style="flex: 1" class="px-4">
         <form class="contact-us-form">
           <div class="row mb-3">
-            <div class="col">
+            <div class="col me-2">
               <label for="form-name" class="form-label text-white">Nombre <span class="text-white muted">*</span></label>
               <input type="text" class="form-control" id="form-name">
             </div>
@@ -167,7 +176,7 @@
                       Fotografía profesional
                     </label>
                   </div>
-                  <div class="fit-content-width">
+                  <div class="fit-content-width me-2">
                     <label for="branding-checkbox">
                       <input id="branding-checkbox" class="form-check-input" type="checkbox" value="">
                       Branding (identidad visual)
@@ -175,19 +184,19 @@
                   </div>
                 </div>
                 <div class="row mb-2">
-                  <div class="fit-content-width">
+                  <div class="fit-content-width me-2">
                     <label for="signals-checkbox">
                       <input id="signals-checkbox" class="form-check-input" type="checkbox" value="">
                       Señalética
                     </label>
                   </div>
-                  <div class="fit-content-width">
+                  <div class="fit-content-width me-2">
                     <label for="packaging-checkbox">
                       <input id="packaging-checkbox" class="form-check-input" type="checkbox" value="">
                       Packaging
                     </label>
                   </div>
-                  <div class="fit-content-width">
+                  <div class="fit-content-width me-2">
                     <label for="other-checkbox">
                       <input id="other-checkbox" class="form-check-input" type="checkbox" value="">
                       Otros
@@ -200,7 +209,7 @@
           <div class="row mt-4 mb-3">
             <div class="col">
               <label for="form-message" class="form-label text-white">Descripción de la solicitud</label>
-              <span class="d-block muted text-white" style="font-size: small;">Cantidad de entregables, Formatos, Adaptaciones, Reducciones (si es que corresponde) y la mayor cantidad de formatos posibles.</span>
+              <span class="d-block muted text-white" style="font-size: small;">Cantidad de entregables, Formatos, Adaptaciones, Reducciones (si es que corresponde) y la mayor cantidad de detalles posibles.</span>
               <textarea class="form-control mt-4 p-4" id="form-message" rows="4"></textarea>
             </div>
           </div>
@@ -211,7 +220,7 @@
               <input type="date" name="deadline" id="" class="px-3 py-2 mt-2" style="border-style: solid; border-width: 1px; color: black">
             </div>
           </div>
-          <a href="#" class="btn submit-btn" role="button">Enviar formulario</a>
+          <a href="#" class="btn submit-btn bitter-bold w-100" role="button">Enviar formulario</a>
         </form>
       </div>
     </div>
@@ -223,9 +232,9 @@
       </div>
       <div class="info-wrapper bitter-regular">
         <p style="font-size: small;">DIRECCIÓN DE CORREO</p>
-        <p style="font-size: x-large;">sofiamonyu@gmail.com</p>
+        <p style="font-size: x-large;">contacto@reflex.cl</p>
         <p style="font-size: small;">NÚMERO DE CONTACTO</p>
-        <p style="font-size: x-large;">(+56) 9 8974 4851</p>
+        <p style="font-size: x-large;">(+56) 9 4683 0936</p>
       </div>
     </div>
     <section class="negative-spikes"></section>
