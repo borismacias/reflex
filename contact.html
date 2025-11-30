@@ -27,6 +27,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <script src="https://www.google.com/recaptcha/enterprise.js?render=6Le5mBosAAAAAHGhb0VA48zJIbLgWPSc-XjgZtoK"></script>
+    <script src="/app.js"></script>
   </head>
   <body>
     <div id="mySidebar" class="sidebar">
@@ -283,30 +284,5 @@
       </div>
       <section class="negative-spikes white-inset"></section>
     </div>
-
-    <script>
-      function toggleSidebar() {
-        const sidebar = document.getElementById("mySidebar");
-        if (sidebar.style.opacity === "1") {
-          closeNav();
-        } else {
-          openNav();
-        }
-      }
-
-      function openNav() {
-        document.getElementById("mySidebar").style.opacity = 1;
-        document.getElementById("mySidebar").style.height = "100%";
-        document.getElementById("mySidebar").style.zIndex = 3;
-        document.body.style.overflow = "hidden";
-      }
-
-      function closeNav() {
-        document.getElementById("mySidebar").style.opacity = 0;
-        document.getElementById("mySidebar").style.height = "0";
-        document.getElementById("mySidebar").style.zIndex = 1;
-        document.body.style.overflow = "auto";
-      }
-    </script>
   </body>
 </html>
